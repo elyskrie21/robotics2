@@ -45,12 +45,15 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services"
-                >Services</a
+              <a class="nav-link js-scroll-trigger" href="#materials"
+                >Materials</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#creating">Creating</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#final">Final</a>
             </li>
           </ul>
         </div>
@@ -63,7 +66,7 @@
       </div>
     </header>
 
-    <section id="services" class="bg-light">
+    <section id="about" class="bg-info">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -78,11 +81,11 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="materials">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Materials</h2>
+            <h2>1: Materials</h2>
             <img src="images/materials.jpg" alt="" />
             <p class="lead">
               Since we will be creating a complicated project, we are going to
@@ -120,56 +123,111 @@
       </div>
     </section>
 
-    <section id="services" class="bg-light">
+    <section id="creating" class="bg-info">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Creating the FM Radio</h2>
-            <h3>
-              Nokia 5110 LCD
-            </h3>
-            <p>
-              This is the screen we are going to use and its a bit complicated so just watch this video to 
-              set it up. 
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aDwrMeu4k9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h3>
-              TEA5767 FM Radio Reciever
-            </h3>
-            <p>This is kina important cause we are making a radio.</p>
-            <p>The chip uses the I2C interface, so it is straightforward to use with Arduino. On the module, we can also find an audio amplifier. Unfortunately, this is a headphone amplifier so we cannot connect a speaker to the output of the module directly since the audio signal is very weak. We need to amplify it first. Also, there is no way to control the volume that comes out of the module with software, so we are going to use a potentiometer later on.</p>
-          </div>
-        </div> 
-      </div>
-    </section>
-    
-        <section id="contact">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <h2>Contact us</h2>
-                <p class="lead">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-                  odio fugiat voluptatem dolor, provident officiis, id iusto!
-                  Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
-                  exercitationem, in, quo totam.
-                </p>
-              </div>
+            <div>
+              <h3>
+                2: Nokia 5110 LCD
+              </h3>
+              <p>
+                This is the screen we are going to use and its a bit complicated
+                so just watch this video to set it up.
+              </p>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/aDwrMeu4k9Y"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div>
+              <h3>
+                3: TEA5767 FM Radio Receiver
+              </h3>
+              <p>This is kinda important cause we are making a radio.</p>
+              <p>
+                The chip uses the I2C interface, so it is straightforward to use
+                with Arduino. On the module, we can also find an audio
+                amplifier. Unfortunately, this is a headphone amplifier so we
+                cannot connect a speaker to the output of the module directly
+                since the audio signal is very weak. We need to amplify it
+                first. Also, there is no way to control the volume that comes
+                out of the module with software, so we are going to use a
+                potentiometer later on.
+              </p>
+              <img
+                src="https://hackster.imgix.net/uploads/attachments/347078/FQTC302J70QTXEA.MEDIUM.jpg?auto=compress%2Cformat&w=680&h=510&fit=max"
+                alt=""
+              />
+            </div>
+
+            <div>
+              <h3>
+                4: Connecting the parts
+              </h3>
+              <p>
+                Im to lazy to write out all the steps soo here is a schematic
+              </p>
+              <img
+                src="https://hackster.imgix.net/uploads/attachments/347080/F93BM4JJ70QTXLE.MEDIUM.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max"
+                alt=""
+              />
+              <p>
+                The hard part is connecting the display so here are the ports
+                you need to connected it too
+              </p>
+              <ul>
+                <li>RST goes to Digital Pin 12 of the Arduino</li>
+                <li>CE goes to Digital Pin 11 of the Arduino</li>
+                <li>DC goes to Digital Pin 10 of the Arduino</li>
+                <li>DIN goes to Digital Pin 9 of the Arduino</li>
+                <li>CLK goes to Digital Pin 8 of the Arduino</li>
+                <li>VCC goes to Arduino 3.3V</li>
+                <li>LIGHT goes to Arduino GND (backlight on)</li>
+                <li>GND goes to Arduino GND</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>5: Code for the project</h3>
+              <p>
+                Not gonna lie, I have no idea how the code works for the project
+                soo you can just download is here
+              </p>
+              <span
+                ><a
+                  href="https://hacksterio.s3.amazonaws.com/uploads/attachments/347073/FMRadio.zip"
+                  >FMRadio.zip</a
+                ></span
+              >
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-    <section id="contact">
+    <section id="final">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Contact us</h2>
+            <h2>Final Thoughts</h2>
             <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-              odio fugiat voluptatem dolor, provident officiis, id iusto!
-              Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
-              exercitationem, in, quo totam.
+              By the end of this "tutorial" you probably have know idea what to do so here a complete video I stole from youtube.
             </p>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/7OMaf4L4Z3s"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
@@ -179,7 +237,7 @@
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2019
+          Copyright &copy; My website Duh 2020
         </p>
       </div>
       <!-- /.container -->
